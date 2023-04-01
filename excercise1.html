@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Opérations sur les tableaux</title>
+    <style>
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+        button {
+        background-color: #4CAF50; / Green /
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+    </style>
+    <script>
+        const arr = [];
+        function pushNumber(){
+            let num = parseInt(document.getElementById("entier").value);
+            num&&arr.push(num);
+            document.getElementById("array").innerHTML = arr.toString();
+
+            var sum = 0;
+			for (let i = 0; i < arr.length; i++) {
+				sum += arr[i];
+			}
+            document.getElementById("sum").innerHTML = sum;
+
+            var min = Math.min(...arr);
+			document.getElementById("min").innerHTML = min;
+
+            var max = Math.max(...arr);
+			document.getElementById("max").innerHTML = max;
+
+            var sorted = arr.sort(function(a, b){return a - b});
+			document.getElementById("sorted").innerHTML = sorted.toString();
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h1>donner un entier</h1>
+    <div>
+        <label>Entrer un entier:</label>
+        <input type="number" id="entier" >
+        <button onclick="pushNumber()">Ajouter au tableau</button>
+        <p>Array: <span id="array"></span></p>
+        <p>Sum: <span id="sum"></span></p>
+        <p>Min: <span id="min"></span></p>
+        <p>Max: <span id="max"></span></p>
+        <p>Le tableau trié: <span id="sorted"></span></p>
+
+    </div>  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Calculator</title>
+        <style>
+            .buttons{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+	            grid-gap: 5px;
+
+            }
+            .affichage {
+                background-color: #fff;
+                border: 2px solid #141313;
+                border-radius: 3px;
+                padding: 5px;
+                margin-bottom: 5px;
+                text-align: right;
+            }
+            button {
+                width: 100px;
+            }
+        </style>
+        <script>
+            let result = document.getElementById("resultat");
+
+
+
+        </script>
+    </head>
+    <body>
+
+        <h1>Calculatrice</h1>
+        <label></label>
+        <div class="affichage">
+			<span id="resultat">0</span>
+            <button>C</button>
+		</div>
+        <div class="buttons">
+            
+            <button>9</button>
+            <button>8</button>
+            <button>7</button>
+            <button>+</button>
+            <button>6</button>
+            <button>5</button>
+            <button>4</button>
+            <button>-</button>
+            <button>3</button>
+            <button>2</button>
+            <button>1</button>
+            <button>*</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+            <button>/</button>
+            
+        </div>
+        
+    </body>
+</html>
